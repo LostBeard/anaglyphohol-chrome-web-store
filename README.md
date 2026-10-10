@@ -82,7 +82,7 @@ Read that again. Google asked for code, received code, and replied that it canno
 Both requests are backwards.
 
 1. **"Not able to see the provided code in the extension package."** The code is in the package. It is compiled, which is what WebAssembly is. The source of every line was linked. If a reviewer cannot evaluate a compiled WebAssembly extension, the honest answer is "we cannot review this", not "this does not exist".
-2. **"Evidence that the functionality is not working after removing the permissions."** Checking whether a permission is used is the reviewer's job. It takes about a minute: install the extension, change the 3D level, reload the page, see that the setting was kept. Instead the developer is asked to produce a broken build, demonstrate that it is broken, and send that in, for a free extension, to get permission to ship the working one.
+2. **"Evidence that the functionality is not working after removing the permissions."** Checking whether a permission is used is the reviewer's job. It takes about a minute: install the extension, change the 3D level, reload the page, see that the setting was kept. Instead the developer is asked to produce a broken build, demonstrate that it is broken, and send that in, for a free extension, to get permission to ship the working one. That is lazy: the reviewer's own job, handed back to the person being reviewed.
 
 ## Same permissions, already approved
 
@@ -127,7 +127,7 @@ Google support staff are not named here. Their emails were signed "Chrome Web St
 
 I am pulling Anaglyphohol from the Chrome Web Store.
 
-I did everything Google asked. I removed the site list they called spam. I answered their permission claim with the exact code, file names, line numbers and links they asked for. Their answer was that they could not see it, and that I should break my own extension and send proof that it is broken. That is not a review. It is a form letter that nobody read, from people who either do not understand WebAssembly, which their own browser supports, or did not look.
+I did everything Google asked. I removed the site list they called spam. I answered their permission claim with the exact code, file names, line numbers and links they asked for. Their answer was that they could not see it, and that I should break my own extension and send proof that it is broken. That is not a review. It is a form letter that nobody read, from people who either do not understand WebAssembly, which their own browser supports, or were too lazy to look.
 
 **If you want a browser run by people who can review an extension, use [Microsoft Edge](https://www.microsoft.com/edge).** It runs every Chrome extension, Microsoft Edge Add-ons [lists Anaglyphohol](https://microsoftedge.microsoft.com/addons/detail/anaglyphohol/njohkaaolgfakmollkfjikipedmlapog), and it loads Anaglyphohol 4.0.0 directly ([INSTALL.md](INSTALL.md)).
 
