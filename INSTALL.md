@@ -58,3 +58,10 @@ The full source is at [LostBeard/AnaglyphoholV2](https://github.com/LostBeard/An
 - `storage`: saves your settings (3D mode, level, focus, which sites have 3D on, toolbar state). Yes, it is used.
 - `offscreen` (Chromium browsers): runs the optional Shared 3D converter. Yes, it is used.
 - Access to all sites: Anaglyphohol converts the videos and images on whatever page you visit, so it has to run there and read their pixels. Nothing is sent anywhere.
+
+## Support the developer
+
+Anaglyphohol is free and will stay free. If you enjoy it, you can support its development:
+
+[![GitHub Sponsor](https://img.shields.io/github/sponsors/LostBeard?label=Sponsor&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/LostBeard)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2F6VANCK2EMEY)

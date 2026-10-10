@@ -138,6 +138,13 @@ That workaround came from Google itself. Asked about the rejection, Google's own
 
 Anaglyphohol 4.0.0 is published on GitHub. See **[INSTALL.md](INSTALL.md)** for Chrome, Edge and Firefox.
 
+## Support the developer
+
+Anaglyphohol is free, with no ads, no tracking and no subscription, and it will stay that way. It is built by one developer, along with the open source libraries it runs on. If it is worth something to you, sponsoring or a one-time donation directly funds more of this work.
+
+[![GitHub Sponsor](https://img.shields.io/github/sponsors/LostBeard?label=Sponsor&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/LostBeard)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2F6VANCK2EMEY)
+
 ## Sources
 
 - Anaglyphohol 4.0.0 source: [LostBeard/AnaglyphoholV2](https://github.com/LostBeard/AnaglyphoholV2) (commit [11b6484](https://github.com/LostBeard/AnaglyphoholV2/tree/11b6484e1383bbd9195a2029983a2794f80a755d) is the submitted build)
