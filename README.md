@@ -13,6 +13,7 @@ Every claim below links to the source code, the commit history, or the verbatim 
 - [Install Anaglyphohol 4.0.0 without the Chrome Web Store](INSTALL.md)
 - [The emails, verbatim](correspondence/)
 - [What it takes to publish a free extension on the Chrome Web Store](THE-WORK.md)
+- Article: [The Chrome Web Store is hostile to WebAssembly](https://dev.to/lostbeard/the-chrome-web-store-is-hostile-to-webassembly-google-rejected-my-free-extension-for-not-using-177m) (dev.to)
 
 ---
 
@@ -48,6 +49,8 @@ Both are used.
 
 - **`storage`** saves every setting the user changes: 3D on or off, per-site image and video switches, 3D mode, 3D level, focus and toolbar state ([DefaultOverlay.razor.cs](https://github.com/LostBeard/AnaglyphoholV2/blob/11b6484e1383bbd9195a2029983a2794f80a755d/Anaglyphohol/ExtensionContent/DefaultOverlay.razor.cs#L66-L175), [ContentOverlay.razor.cs](https://github.com/LostBeard/AnaglyphoholV2/blob/11b6484e1383bbd9195a2029983a2794f80a755d/Anaglyphohol/Layout/ContentOverlay.razor.cs#L121), [Options.razor](https://github.com/LostBeard/AnaglyphoholV2/blob/11b6484e1383bbd9195a2029983a2794f80a755d/Anaglyphohol/Pages/Options.razor#L39-L47)). Without it, no setting survives a page load.
 - **`offscreen`** runs the "Shared 3D converter", an option on the Options page that runs one depth and 3D converter for every tab ([ConverterRelayService.cs](https://github.com/LostBeard/AnaglyphoholV2/blob/11b6484e1383bbd9195a2029983a2794f80a755d/Anaglyphohol/Background/ConverterRelayService.cs#L55-L100)). Without it, that option cannot work.
+
+Notice what this rejection is not. Google did not say Anaglyphohol is malware, a scam, or a privacy risk. It did not say the extension does anything harmful. It said the extension asks for two permissions and does not use them: in other words, that it does too little. Neither permission even shows users a warning at install time ([Chrome's permission list](https://developer.chrome.com/docs/extensions/reference/permissions-list) gives `history`, `tabs` and others a "Warning displayed" line; `storage` and `offscreen` have none). And the claim is false: both are used. A free extension was rejected for not using code that it does use. That is not caution. It is a review that cannot tell what the code does, repeated through two appeals.
 
 ### Why a text search does not find them
 
