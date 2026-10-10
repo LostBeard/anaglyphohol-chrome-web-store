@@ -97,6 +97,17 @@ Every Chrome version of Anaglyphohol has requested `storage`. Every one before 4
 
 Versions 1 and 2 were built the same way 4.0.0 is: .NET Blazor WebAssembly, requesting a permission that a text search of their JavaScript cannot find. Google approved both. Version 3.0.14, live on the store right now, requests the exact same two permissions as 4.0.0 and carries the exact same description. Google approves the extension it is serving and rejects the update that asks for nothing more.
 
+## The Chrome Web Store is hostile to WebAssembly
+
+Put the record together:
+
+- Chrome supports WebAssembly in Manifest V3 extensions, and its content security policy has a setting (`wasm-unsafe-eval`) made for it.
+- The review treats a permission as unused unless the package's JavaScript names it. A permission used from WebAssembly is rejected as "not used".
+- When the developer sent the code, the answer was "We are not able to see the provided code in the extension package". The fix Google demanded was to remove the permissions, not to look at the code.
+- Google's own AI explains the review the same way: a "naive static string-matching analyzer" that only clears the build if JavaScript names the API. Its advice is to fake that JavaScript ([evidence](evidence/gemini-workaround.md)).
+
+In practice, that makes the Chrome Web Store hostile to WebAssembly. An extension written in C#, Rust, Go, C++ or any other language that compiles to WebAssembly can use exactly the APIs it declares and still be rejected, unless it adds JavaScript whose only job is to be seen by the scan. Versions 1 and 2 of Anaglyphohol got through. Version 4 did not, and nothing in the rules tells a developer which outcome to expect.
+
 ## Free work, turned away
 
 Extensions are a large part of what makes Chrome worth using, and developers build them for free. Every free extension Google lists makes its browser more valuable at no cost to Google. Anaglyphohol asks Google for nothing but a listing.
