@@ -146,6 +146,8 @@ To put a free extension on Google's store, I had to give Google my full name, ho
 
 This is not limited to Chrome. Google now requires Android developers to register and verify their identity with Google before their apps can be installed on certified Android devices, even apps that never touch the Play Store. Enforcement began on September 30, 2026 in Brazil, Indonesia, Singapore and Thailand, and Google plans to apply it worldwide in 2027. Apps from unregistered developers are pushed into an "advanced" install flow with extra steps and a waiting period ([Android Authority](https://www.androidauthority.com/android-sideloading-changes-timeline-3679204/), [9to5Google](https://9to5google.com/2026/08/18/google-gradually-rolling-out-androids-advanced-sideloading-ahead-of-developer-verification/)). Independent developers who publish anything on Google's platforms are treated as the problem.
 
+If I owned Alphabet stock, I would want to know that the Chrome Web Store turns away finished, free work because its review cannot read WebAssembly and will not look at the code it asks for.
+
 I will not spend any more of my time on Google's stores. Anaglyphohol stays free and open source, on GitHub, on Edge, and in Firefox.
 
 **Using Google is just not worth it.**
