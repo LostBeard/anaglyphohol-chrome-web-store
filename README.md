@@ -97,6 +97,17 @@ Every Chrome version of Anaglyphohol has requested `storage`. Every one before 4
 
 Versions 1 and 2 were built the same way 4.0.0 is: .NET Blazor WebAssembly, requesting a permission that a text search of their JavaScript cannot find. Google approved both. Version 3.0.14, live on the store right now, requests the exact same two permissions as 4.0.0 and carries the exact same description. Google approves the extension it is serving and rejects the update that asks for nothing more.
 
+## Free work, turned away
+
+Extensions are a large part of what makes Chrome worth using, and developers build them for free. Every free extension Google lists makes its browser more valuable at no cost to Google. Anaglyphohol asks Google for nothing but a listing.
+
+Alphabet reported [$403 billion in revenue for 2025](https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx). The check that would have settled this takes about a minute. Here is what Google did instead:
+
+1. The rejection flagged two permissions it could not find in the package's text.
+2. A person handled the appeal, asked for code, received it, and answered with the same finding, adding only that they could not see it.
+
+If the final word belongs to whatever the first pass could or could not find, what is the person on the appeal being paid for? Google pays for a human review step, and the human handed the review back to the developer. That is lazy, and it turns away free work that Google itself benefits from.
+
 ## The cost
 
 - **Users.** About 145 Chrome users are still on 3.0.14. They do not get 4.0.0's new engine, its video depth model that stops scenes from flickering, cleaner edges, or the removal of every time limit (4.0.0 is free on every site).
