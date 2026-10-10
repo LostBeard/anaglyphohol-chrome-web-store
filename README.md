@@ -6,6 +6,8 @@ A documented record of how the Chrome Web Store handles a free, open source brow
 
 Version 4.0.0 was submitted to the Chrome Web Store in October 2026. As of October 10, 2026 it has been rejected twice and its appeal has been denied twice. Chrome users are still being served version 3.0.14, from August 2025.
 
+**The short version:** Anaglyphohol 1, 2 and 4 are .NET Blazor WebAssembly apps. Version 3 is plain JavaScript and HTML. Google approved versions 1 and 2, which requested `storage` and used it from compiled WebAssembly, where a text search of the package's JavaScript cannot find it. Google approved version 3, which requests `storage` and `offscreen` and names them in its JavaScript. Then it rejected version 4, which requests the same `storage` and `offscreen` as version 3 and uses them from WebAssembly exactly as versions 1 and 2 did, on the grounds that it "cannot see" them being used.
+
 Every claim below links to the source code, the commit history, or the verbatim email it comes from. Nothing here is paraphrased from memory.
 
 - [Install Anaglyphohol 4.0.0 without the Chrome Web Store](INSTALL.md)
@@ -63,6 +65,8 @@ public Task<bool> HasDocument() => JSRef!.CallAsync<bool>("hasDocument");
 
 So the literal text `chrome.storage` and `chrome.offscreen` does not appear in the package's `.js` files. The calls are made from the compiled WebAssembly. The names are still in the package: the strings `storage`, `offscreen`, `createDocument` and `hasDocument` are stored in the compiled code (`app/_framework/SpawnDev.SpawnJS.BrowserExtension.*.wasm`, as UTF-16 text, the way .NET stores strings).
 
+None of this is new to Google. Versions 1 and 2 of Anaglyphohol were also .NET Blazor WebAssembly apps. They also requested `storage`. They also called it from compiled WebAssembly through an interop library ([SpawnDev.BlazorJS.BrowserExtension](https://github.com/LostBeard/SpawnDev.BlazorJS.BrowserExtension)), so their JavaScript never named `chrome.storage` either. Google approved both. Version 4 is the first one it "cannot see".
+
 ### The appeal
 
 Google [asked](correspondence/2026-10-09-appeal-denied.md) for "evidence(code snippet) of usage of above permission". The developer [sent it](correspondence/2026-10-09-developer-reply.md): every call site, with file names, line numbers, the interop library code that calls `chrome.storage.sync.get/set` and `chrome.offscreen.createDocument/hasDocument/closeDocument`, GitHub permalinks to the exact commits used for the build, and the steps to watch the offscreen document run.
@@ -86,12 +90,12 @@ Every Chrome version of Anaglyphohol has requested `storage`. Every one before 4
 
 | Version | Written in | Permissions | How `storage` is called | Chrome Web Store |
 |---|---|---|---|---|
-| 1.0.x (2025) | C# / Blazor WebAssembly | `storage` | from WebAssembly, by name ([DefaultOverlay.razor.cs](https://github.com/LostBeard/Anaglyphohol/blob/288a739/Anaglyphohol/ExtensionContent/DefaultOverlay.razor.cs#L53)) | Approved |
-| 2.0.0 (2025) | C# / Blazor WebAssembly | `storage` | from WebAssembly, by name ([DefaultOverlay.razor.cs](https://github.com/LostBeard/AnaglyphoholV2/blob/e37e0dc/Anaglyphohol/ExtensionContent/DefaultOverlay.razor.cs#L68)) | Approved |
-| 3.0.14 (Aug 2025) | JavaScript | `storage`, `offscreen` | literal `chrome.storage` | **Live today** |
-| 4.0.0 (Oct 2026) | C# / Blazor WebAssembly | `storage`, `offscreen` | from WebAssembly, by name | **Rejected: "not used"** |
+| 1.0.x (2025) | .NET 8 Blazor WebAssembly | `storage` | from WebAssembly, by name ([DefaultOverlay.razor.cs](https://github.com/LostBeard/Anaglyphohol/blob/288a739/Anaglyphohol/ExtensionContent/DefaultOverlay.razor.cs#L53)) | **Approved** |
+| 2.0.0 (2025) | .NET 8 Blazor WebAssembly | `storage` | from WebAssembly, by name ([DefaultOverlay.razor.cs](https://github.com/LostBeard/AnaglyphoholV2/blob/e37e0dc/Anaglyphohol/ExtensionContent/DefaultOverlay.razor.cs#L68)) | **Approved** |
+| 3.0.14 (Aug 2025) | JavaScript and HTML | `storage`, `offscreen` | literal `chrome.storage` | **Approved, live today** |
+| 4.0.0 (Oct 2026) | .NET 10 Blazor WebAssembly | `storage`, `offscreen` | from WebAssembly, by name | **Rejected: "not used"** |
 
-Versions 1 and 2 used `storage` the same way 4.0.0 does, from WebAssembly, and were approved. Version 3.0.14, live on the store right now, requests the exact same two permissions as 4.0.0 and carries the exact same description. Google approves the extension it is serving and rejects the update that asks for nothing more.
+Versions 1 and 2 were built the same way 4.0.0 is: .NET Blazor WebAssembly, requesting a permission that a text search of their JavaScript cannot find. Google approved both. Version 3.0.14, live on the store right now, requests the exact same two permissions as 4.0.0 and carries the exact same description. Google approves the extension it is serving and rejects the update that asks for nothing more.
 
 ## The cost
 
