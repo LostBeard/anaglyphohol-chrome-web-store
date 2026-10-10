@@ -5,7 +5,8 @@ Anaglyphohol costs nothing, shows no ads, collects no data and has no account. I
 ## Before the first upload
 
 - **Pay Google.** A one-time developer registration fee, to give away free software.
-- **Hand over your identity.** Google required the developer's full name, home address and phone number. The public listing displays his full name, home street address and email address to anyone who opens it. There was no option to use a PO box. For a solo developer, there is no business address to put there instead: it is the family's home.
+- **Hand over your identity.** Google required the developer's full name, home address and phone number, and published all three on the listing while he was registered as a "trader". There was no option to use a PO box. For a solo developer, there is no business address to put there instead: it is the family's home.
+- **Watch the dashboard flip your status.** The developer's account was switched to "non-trader" by accident. The dashboard did not ask him to confirm the change. Switching back to "trader" required uploading his driver's license again, so he left it. Even as a "non-trader", the listing still shows his full name, home street address and email address to anyone who opens it. Only the phone number went away.
 - **Fill in the listing.** A description written under keyword rules that are applied inconsistently (see below), screenshots, promotional images, a category, and a privacy section: a "single purpose" statement, a written justification for every permission, and data-use certifications.
 
 ## Every update after that
