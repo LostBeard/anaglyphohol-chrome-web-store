@@ -118,6 +118,8 @@ If the final word belongs to whatever the first pass could or could not find, wh
 
 The obvious workaround is to add a JavaScript file that names `chrome.storage` and `chrome.offscreen` literally, only so that a text search finds them. That would change nothing about what the extension does. It would only teach the review process that a keyword search is a review. It was not done.
 
+That workaround came from Google itself. Asked how to get past the rejection, Google's own AI, Gemini, told the developer to add JavaScript that looks like it uses those APIs, just to get past the automated scan. Claude, the AI he builds with, pointed out that this would likely make things worse: code that exists only to pass a scan looks like an attempt to mislead the review if a reviewer ever notices it. Google's AI advises gaming Google's review. Google's review rejects honest code.
+
 ## Install it anyway
 
 Anaglyphohol 4.0.0 is published on GitHub. See **[INSTALL.md](INSTALL.md)** for Chrome, Edge and Firefox.
