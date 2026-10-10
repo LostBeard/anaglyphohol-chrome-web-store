@@ -11,5 +11,6 @@ Every email between the developer and the Chrome Web Store about Anaglyphohol 4.
 | Oct 9, 2026 | Google | [Appeal denied, asks for code snippets](2026-10-09-appeal-denied.md) |
 | Oct 9, 2026 | Developer | [Reply with the code snippets and permalinks](2026-10-09-developer-reply.md) |
 | Oct 10, 2026 | Google | [Appeal denied again: "not able to see the provided code"](2026-10-10-appeal-denied-again.md) |
+| Oct 10, 2026 | Developer | [Sends Google the dev.to write-up](2026-10-10-developer-sends-article.md) |
 
 The October 9 appeal was filed through the Appeal button in the Developer Dashboard, as the rejection email instructs.
