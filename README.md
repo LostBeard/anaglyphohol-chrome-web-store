@@ -28,7 +28,7 @@ Every claim below links to the source code, the commit history, or the verbatim 
 | Oct 9, 2026 08:39 | **Appeal denied.** Google asks for "evidence (code snippet) of usage". |
 | Oct 9, 2026 08:48 | Developer replies with the code snippets, file names, line numbers and GitHub permalinks to the exact commits in the build. |
 | Oct 10, 2026 02:18 | **Appeal denied again.** "We are not able to see the provided code in the extension package." Google asks the developer to prove the extension is broken without the permissions. |
-| Oct 13, 2026 19:17 | **Microsoft Edge Add-ons publishes** the same extension package. Edge never rejected it. |
+| Oct 13, 2026 19:17 | **Microsoft Edge Add-ons publishes** Anaglyphohol 4.0.0, the same package. Edge never rejected it. |
 | Oct 14, 2026 08:30 | **Published.** Google's automated notice: version 4.0.0, visibility Public. |
 | Oct 14, 2026 08:40 | **Reinstated.** "We took a closer look at your item again and found it to be compliant with our policies." Google apologizes for the inconvenience. |
 
@@ -104,7 +104,7 @@ Every Chrome version of Anaglyphohol has requested `storage`. Every one before 4
 - For a week, the review treated a permission as unused unless the package's JavaScript named it. A permission used from WebAssembly was rejected as "not used".
 - When the developer sent the code, the first answer was "We are not able to see the provided code in the extension package", and the fix requested was to remove the permissions.
 - Google's own AI described the review as a "naive static string-matching analyzer" that only clears the build if JavaScript names the API, and advised faking that JavaScript ([evidence](evidence/gemini-workaround.md)).
-- Microsoft Edge Add-ons published the same package on October 13 without a rejection.
+- Microsoft Edge Add-ons published the same 4.0.0 package on October 13 without a rejection.
 - On October 14, Google looked again and accepted the same 4.0.0 build it had rejected. No changes were requested.
 
 An extension written in C#, Rust, Go, C++ or any other language that compiles to WebAssembly can use exactly the APIs it declares and still be rejected by a scan that only reads JavaScript. Versions 1 and 2 of Anaglyphohol got through. Version 4 did not, until the second look. This record does not know whether the scan itself changed. A developer who hits the same rejection has this evidence that the appeal can succeed, and what to send.
