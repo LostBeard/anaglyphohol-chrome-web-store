@@ -1,6 +1,6 @@
 # Correspondence
 
-Every email between the developer and the Chrome Web Store about Anaglyphohol 4.0.0, plus one earlier ticket, in date order. Google's emails are reproduced verbatim, including their formatting. Personal email addresses are left out. Google support staff are not named; every email was signed "Chrome Web Store Developer Support".
+The emails between the developer and the Chrome Web Store about Anaglyphohol 4.0.0, plus one earlier ticket, in date order. Google's emails are reproduced verbatim, including their formatting. Personal email addresses are left out. Google support staff are not named; every email was signed "Chrome Web Store Developer Support".
 
 | Date (Eastern) | From | What |
 |---|---|---|
@@ -12,5 +12,7 @@ Every email between the developer and the Chrome Web Store about Anaglyphohol 4.
 | Oct 9, 2026 | Developer | [Reply with the code snippets and permalinks](2026-10-09-developer-reply.md) |
 | Oct 10, 2026 | Google | [Appeal denied again: "not able to see the provided code"](2026-10-10-appeal-denied-again.md) |
 | Oct 10, 2026 | Developer | [Sends Google the dev.to write-up](2026-10-10-developer-sends-article.md) |
+| Oct 14, 2026 | Google | [Item successfully published (4.0.0)](2026-10-14-item-published.md) |
+| Oct 14, 2026 | Google | [Appeal resolved: the item has been reinstated](2026-10-14-appeal-reinstated.md) |
 
 The October 9 appeal was filed through the Appeal button in the Developer Dashboard, as the rejection email instructs.

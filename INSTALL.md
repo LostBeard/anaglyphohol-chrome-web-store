@@ -1,6 +1,6 @@
-# Install Anaglyphohol 4.0.0 without the Chrome Web Store
+# Install Anaglyphohol 4.0.0 from GitHub
 
-Anaglyphohol 4.0.0 is published on GitHub. These are the same files that were submitted to the Chrome Web Store.
+Anaglyphohol 4.0.0 is on the [Chrome Web Store](https://chromewebstore.google.com/detail/anaglyphohol/fjbffnhfchidmfcbecccnmdedjahankc) (reinstated October 14, 2026), and it is also published on GitHub. These are the same files that were submitted to the store. Use this page for Edge, Brave, Opera, Vivaldi, Firefox, or if you prefer to install from a folder.
 
 **Download:** [Anaglyphohol 4.0.0 release](https://github.com/LostBeard/AnaglyphoholV2/releases/tag/v4.0.0)
 
@@ -27,7 +27,7 @@ The same steps as Edge, from the extensions page:
 3. Turn on **Developer mode** (top right in Chrome).
 4. Click **Load unpacked** and select the extracted folder (the one that contains `manifest.json`).
 
-If you already have Anaglyphohol 3.0.14 from the Chrome Web Store, remove it first so the two versions do not both run on the same pages.
+If you already have Anaglyphohol from the Chrome Web Store, remove it first so the two copies do not both run on the same pages.
 
 ## Firefox
 

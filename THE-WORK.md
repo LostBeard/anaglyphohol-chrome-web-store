@@ -1,6 +1,6 @@
 # What it takes to publish a free extension on the Chrome Web Store
 
-Anaglyphohol costs nothing, shows no ads, collects no data and has no account. Its source is public. This is what Google required before a single person could install it from the Chrome Web Store, and what it took to try to ship one update.
+Anaglyphohol costs nothing, shows no ads, collects no data and has no account. Its source is public. This is what Google required before a single person could install it from the Chrome Web Store, and what it took to ship one update.
 
 ## Before the first upload
 
@@ -14,19 +14,20 @@ Anaglyphohol costs nothing, shows no ads, collects no data and has no account. I
 - **Rebuild.** Anaglyphohol is compiled ahead of time to WebAssembly for speed. A full release build takes over an hour. Any change to the manifest, even one sentence of description, means a new package.
 - **Submit and wait.** Every submission goes back into review. Every rejection means fix, resubmit, and wait again.
 - **Guess the rules.** The same site list Google approved in an earlier version's description was rejected as "keyword spam" in this one. Separately, an Overview text in the dashboard was refused for naming the sites the extension works on.
-- **Argue with form letters.** Appeals come back as templates. They ask for evidence, receive it, and answer as though nothing was sent.
+- **Argue with form letters.** Appeals come back as templates. Two did: they asked for evidence, received it, and answered as though nothing was sent. The third answer, on October 14, was a reinstatement.
 
 ## This update, in numbers
 
 | | |
 |---|---|
 | Days from first rejection to second appeal denial | 4 |
+| Days from first rejection to reinstatement | 7 |
 | Rejections | 2 |
 | Appeals denied | 2 |
-| Reasons that held up | 0 |
+| Reasons that held up | 0, per Google's own reversal |
 | Permissions requested that 3.0.14, live on the store, does not already request | 0 |
 | Lines of code Google asked for, received, and said it could not see | all of them |
-| Chrome users who received the update | 0 |
+| Chrome users who received the update before the reversal | 0 |
 
 ## Where the time should have gone
 
