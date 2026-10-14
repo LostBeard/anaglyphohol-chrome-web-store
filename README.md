@@ -4,7 +4,7 @@ A documented record of a Chrome Web Store review dispute over a free, open sourc
 
 [Anaglyphohol](https://github.com/LostBeard/AnaglyphoholV2) turns the videos and images on web pages into 3D as you browse. It is free on every site, has no account, no ads, no tracking, and sends nothing anywhere: the depth AI runs on your own graphics card. The full source is public.
 
-Version 4.0.0 was submitted to the Chrome Web Store in October 2026. It was rejected twice and two appeals were denied. On October 14, after a third look, Chrome Web Store Developer Support wrote: "We took a closer look at your item again and found it to be compliant with our policies. Your item has been reinstated." The email did not say what changed, so this record does not claim to know.
+Version 4.0.0 was submitted to the Chrome Web Store in October 2026. It was rejected twice and two appeals were denied. On October 14, after a third look, Google accepted the same 4.0.0 build it had rejected, and Chrome Web Store Developer Support wrote: "We took a closer look at your item again and found it to be compliant with our policies. Your item has been reinstated." The email did not say what changed, so this record does not claim to know.
 
 **The short version:** Anaglyphohol 1, 2 and 4 are .NET Blazor WebAssembly apps. Version 3 is plain JavaScript and HTML. Google approved versions 1 and 2, which requested `storage` and used it from compiled WebAssembly, where a text search of the package's JavaScript cannot find it. Google approved version 3, which requests `storage` and `offscreen` and names them in its JavaScript. Then it rejected version 4, which requests the same `storage` and `offscreen` as version 3 and uses them from WebAssembly exactly as versions 1 and 2 did, on the grounds that it could not see them being used. A week later it reversed that decision.
 
@@ -103,7 +103,7 @@ Every Chrome version of Anaglyphohol has requested `storage`. Every one before 4
 - For a week, the review treated a permission as unused unless the package's JavaScript named it. A permission used from WebAssembly was rejected as "not used".
 - When the developer sent the code, the first answer was "We are not able to see the provided code in the extension package", and the fix requested was to remove the permissions.
 - Google's own AI described the review as a "naive static string-matching analyzer" that only clears the build if JavaScript names the API, and advised faking that JavaScript ([evidence](evidence/gemini-workaround.md)).
-- On October 14, Google looked again and found the extension compliant, with no changes requested.
+- On October 14, Google looked again and accepted the same 4.0.0 build it had rejected. No changes were requested.
 
 An extension written in C#, Rust, Go, C++ or any other language that compiles to WebAssembly can use exactly the APIs it declares and still be rejected by a scan that only reads JavaScript. Versions 1 and 2 of Anaglyphohol got through. Version 4 did not, until the second look. This record does not know whether the scan itself changed. A developer who hits the same rejection has this evidence that the appeal can succeed, and what to send.
 
